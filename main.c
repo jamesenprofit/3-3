@@ -3,16 +3,22 @@
 int main()
 
 {
-int feld=1;
-long long int reis=1;
-printf("\nFeld                                      Reis\n");
-    while (feld<=64)
-    {
-        printf("%3i     %20llu\n",feld,reis);
-        feld++;
-        reis*=2;
-    }   
 
+char test;
+FILE*datei;
+datei = fopen("waferprotokoll.csv","r");
+if (datei==NULL)
+{
+    printf("Fehler beim Öffnen der Datei\n");
+}
+else
+{
+    printf("Datei wurde geöffnet\n");
+    printf("Test:");
+    fgets(test);
+    
+}
+fclose(datei);
 
 return 0;
 
